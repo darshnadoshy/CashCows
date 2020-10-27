@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-1.4385967254638672,"y":-5.584647178649902,"z":41.64796447753906},"rotation":{"x":-0.11527232080698013,"y":0.0690758153796196,"z":-0.008036413230001927,"w":-0.9909034371376038},"size":21.227758407592775,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":false,"showMaterialUpdate":false,"showSkybox":false,"showFlares":false,"showImageEffects":false,"showParticleSystems":false},"in2DMode":false,"pivot":{"x":22.484390258789064,"y":3.0003528594970705,"z":2.0464296340942385},"rotation":{"x":-0.15556277334690095,"y":0.23377199470996858,"z":-0.0379282645881176,"w":-0.9590272903442383},"size":2.5540575981140138,"orthographic":true}
+>>>>>>> cow_lauryn
