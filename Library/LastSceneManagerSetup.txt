@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/store.unity
+=======
+- path: Assets/Scenes/Bank Summary.unity
+>>>>>>> c6f243a7216a45e9fefe5f4ead8dee88b3f7ac81
   isLoaded: 1
   isActive: 1
   isSubScene: 0
