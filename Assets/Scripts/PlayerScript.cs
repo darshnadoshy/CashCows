@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int totalMoola;
+    static public int totalMoola = 200;
     //private static int minMoola;
     public Text PlayerMoola;
 
     // Start is called before the first frame update
     void Start()
     {
-        totalMoola = 200;
-        //minMoola = 0;
+        PlayerMoola.text = "" + totalMoola;
     }
 
     // Update is called once per frame
@@ -22,7 +21,15 @@ public class PlayerScript : MonoBehaviour
         PlayerMoola.text = "" + totalMoola;
     }
 
-    // void updateMoola(){
-        
-    // }
+    public void AddMoola(int moola){
+        totalMoola += moola;
+    }
+
+    public void SubtractMoola(int moola){
+        if(totalMoola - moola < 0){
+            Debug.Log("Not enough money");
+        } else {
+            totalMoola -= moola;
+        }
+    }
 }
