@@ -48,7 +48,7 @@ public class PlayerScript : MonoBehaviour
         CowReferences = new List<Cow>();
         GameObject cowObj = (GameObject)Instantiate(CowPreFab, new Vector3(18.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new Cow("Betsy", cowObj));
-        // DELETE LATER - for testing
+        // DELETE LATER - for testing /////////////////////
         GameObject cowObj2 = (GameObject)Instantiate(CowPreFab, new Vector3(19.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new Cow("Donna", cowObj2));
     }

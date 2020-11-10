@@ -7,17 +7,29 @@ public class CowMenuPopUp : MonoBehaviour
 {
     private Transform container;
     private Transform cowItemTemplate;
+    private Transform cowText;
+    private Transform cowBackground;
+    
     public GameObject player; // for list of cows
     //static int flag = 0; //use to switch on and off? look up tutorial?
 
     private void Awake(){
         container = transform.Find("container");
         cowItemTemplate = container.Find("MenuObjTemplate");
+        cowText = transform.Find("MilkCowText");
+        cowBackground = transform.Find("MenuBackground");
         cowItemTemplate.gameObject.SetActive(false);
+        cowText.gameObject.SetActive(false);
+        cowBackground.gameObject.SetActive(false);
     }
 
     public void onTrigger(){
-    for(int i = 0; i < player.GetComponent<PlayerScript>().GetListCows().Count; i++){
+        cowText = transform.Find("MilkCowText");
+        cowBackground = transform.Find("MenuBackground");
+        cowText.gameObject.SetActive(true);
+        cowBackground.gameObject.SetActive(true);
+
+        for(int i = 0; i < player.GetComponent<PlayerScript>().GetListCows().Count; i++){
             CreateMenuItem(player.GetComponent<PlayerScript>().GetListCows()[i].Name, i+1);
         }
     }
