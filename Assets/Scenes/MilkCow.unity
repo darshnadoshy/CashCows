@@ -1520,6 +1520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerMoola: {fileID: 1492345254}
+  CowPreFab: {fileID: 0}
 --- !u!4 &1123930544
 Transform:
   m_ObjectHideFlags: 0
@@ -1723,6 +1724,18 @@ PrefabInstance:
     - target: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054502789990554, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
