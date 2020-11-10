@@ -34,7 +34,8 @@ public class Cow {
 public class PlayerScript : MonoBehaviour
 {
     // STATIC Vars
-    static public int totalMoola = 200;
+    static public int checkingsMoola = 200;
+    static public int savingsMoola = 0;
     static public List<Cow> CowReferences; // TODO switch to Cow object
 
     //Vars
@@ -44,7 +45,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerMoola.text = "" + totalMoola;
+        PlayerMoola.text = "" + checkingsMoola;
         CowReferences = new List<Cow>();
         GameObject cowObj = (GameObject)Instantiate(CowPreFab, new Vector3(18.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new Cow("Betsy", cowObj));
@@ -56,18 +57,18 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerMoola.text = "" + totalMoola;
+        PlayerMoola.text = "" + checkingsMoola;
     }
 
     public void AddMoola(int moola){
-        totalMoola += moola;
+        checkingsMoola += moola;
     }
 
     public void SubtractMoola(int moola){
-        if(totalMoola - moola < 0){
+        if(checkingsMoola - moola < 0){
             Debug.Log("Not enough money");
         } else {
-            totalMoola -= moola;
+            checkingsMoola -= moola;
         }
     }
 
