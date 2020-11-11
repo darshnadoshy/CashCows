@@ -9,6 +9,10 @@ public class SceneChangeScript : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    // public void SceneChangePopUpToCow(string scene){
+    //     SceneManager.LoadScene(scene);
+    // }
+
     // public void PopUp(GameObject obj){
     //     obj.enabled = true;
     // }
