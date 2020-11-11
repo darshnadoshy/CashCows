@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class IntroSequence : MonoBehaviour
 {
-    private Transform IntroSeq;
-    //private Transform WelcomeScreen;
+    private Transform WelcomeScreen;
     private static int time = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        IntroSeq = transform.Find("IntroSequence");
-        //WelcomeScreen = IntroSeq.Find("WelcomeScreen");
-        IntroSeq.gameObject.SetActive(true);
-        RectTransform IntroRectTransform = IntroSeq.GetComponent<RectTransform>();
-        IntroRectTransform.anchoredPosition = new Vector2(0f,0f);
+        WelcomeScreen = transform.Find("Welcome");
+        WelcomeScreen.gameObject.SetActive(true);
+        RectTransform WelcomeRectTransform = WelcomeScreen.GetComponent<RectTransform>();
+        WelcomeRectTransform.anchoredPosition = new Vector2(0f,0f);
     }
 
     // Update is called once per frame
@@ -23,7 +21,7 @@ public class IntroSequence : MonoBehaviour
     {
         time += 1;
         if (time == 15){
-            IntroSeq.gameObject.SetActive(false);
+            WelcomeScreen.gameObject.SetActive(false);
         }
     }
 }
