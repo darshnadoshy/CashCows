@@ -14,6 +14,7 @@ public class IntroSequence : MonoBehaviour
     private Transform PastureTextIntroduction1;
     private Transform ExploreTextIntroduction;
     private static int time = 0;
+    public static int flag = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,6 @@ public class IntroSequence : MonoBehaviour
         MoolaTextIntroduction1.gameObject.SetActive(false);
         WelcomeTextIntroduction.gameObject.SetActive(false);
         Introduction.gameObject.SetActive(false);
-        WelcomeScreen.gameObject.SetActive(true);
         
         RectTransform WelcomeRectTransform = WelcomeScreen.GetComponent<RectTransform>();
         WelcomeRectTransform.anchoredPosition = new Vector2(0f,0f);
@@ -46,37 +46,44 @@ public class IntroSequence : MonoBehaviour
     void Update()
     {
         time += 1;
-        if (time == 15){
-            WelcomeScreen.gameObject.SetActive(false);
-            Introduction.gameObject.SetActive(true);
-            WelcomeTextIntroduction.gameObject.SetActive(true);
-        }
-        if(time == 30){
-            WelcomeTextIntroduction.gameObject.SetActive(false);
-            MoolaTextIntroduction1.gameObject.SetActive(true);
-        }
-        if(time == 50){
-            MoolaTextIntroduction1.gameObject.SetActive(false);
-            MoolaTextIntroduction2.gameObject.SetActive(true);
-        }
-        if(time == 75){
-            MoolaTextIntroduction2.gameObject.SetActive(false);
-            StoreTextIntroduction1.gameObject.SetActive(true);
-        }
-        if(time == 100){
-            StoreTextIntroduction1.gameObject.SetActive(false);
-            CodexTextIntroduction1.gameObject.SetActive(true);
-        }
-        if(time == 125){
-            CodexTextIntroduction1.gameObject.SetActive(false);
-            PastureTextIntroduction1.gameObject.SetActive(true);
-        }
-        if(time == 150){
-            PastureTextIntroduction1.gameObject.SetActive(false);
-            ExploreTextIntroduction.gameObject.SetActive(true);
-        }
-        if(time == 175){
-            ExploreTextIntroduction.gameObject.SetActive(false);
+        if(flag == 0){
+            if(time < 20){
+                WelcomeScreen.gameObject.SetActive(true);
+            }
+            if (time == 20){
+                WelcomeScreen.gameObject.SetActive(false);
+                Introduction.gameObject.SetActive(true);
+                WelcomeTextIntroduction.gameObject.SetActive(true);
+            }
+            if(time == 100){
+                WelcomeTextIntroduction.gameObject.SetActive(false);
+                MoolaTextIntroduction1.gameObject.SetActive(true);
+            }
+            if(time == 200){
+                MoolaTextIntroduction1.gameObject.SetActive(false);
+                MoolaTextIntroduction2.gameObject.SetActive(true);
+            }
+            if(time == 300){
+                MoolaTextIntroduction2.gameObject.SetActive(false);
+                StoreTextIntroduction1.gameObject.SetActive(true);
+            }
+            if(time == 400){
+                StoreTextIntroduction1.gameObject.SetActive(false);
+                CodexTextIntroduction1.gameObject.SetActive(true);
+            }
+            if(time == 500){
+                CodexTextIntroduction1.gameObject.SetActive(false);
+                PastureTextIntroduction1.gameObject.SetActive(true);
+            }
+            if(time == 600){
+                PastureTextIntroduction1.gameObject.SetActive(false);
+                ExploreTextIntroduction.gameObject.SetActive(true);
+            }
+            if(time == 700){
+                ExploreTextIntroduction.gameObject.SetActive(false);
+                Introduction.gameObject.SetActive(false);
+                flag = 1;
+            }
         }
     }
 }

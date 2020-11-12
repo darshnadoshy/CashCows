@@ -1,9 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CameraScript
-    - ClickPasture
+    - CowMenuPopUp
     - CowScript
+    - IntroSequence
     - MilkCowScript
     - PlayerScript
     - SceneChangeScript
@@ -58,11 +58,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11862}
     - Class: 114
       Script: {instanceID: 12252}
     - Class: 114
@@ -70,7 +70,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 13090}
+    - Class: 114
+      Script: {instanceID: 18038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -106,9 +108,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 64
+    - Class: 49
       Script: {instanceID: 0}
-    - Class: 65
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -123,19 +125,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11392}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 11862}
+    - Class: 114
+      Script: {instanceID: 11888}
     - Class: 114
       Script: {instanceID: 12078}
     - Class: 114
       Script: {instanceID: 12252}
-    - Class: 114
-      Script: {instanceID: 12394}
     - Class: 114
       Script: {instanceID: 12432}
     - Class: 114
@@ -143,11 +145,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12476}
     - Class: 114
+      Script: {instanceID: 12490}
+    - Class: 114
       Script: {instanceID: 12676}
     - Class: 114
       Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 12888}
+    - Class: 114
+      Script: {instanceID: 12946}
+    - Class: 114
+      Script: {instanceID: 13090}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,11 +212,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11862}
+    - Class: 114
+      Script: {instanceID: 12078}
     - Class: 114
       Script: {instanceID: 12252}
     - Class: 114
@@ -220,9 +230,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 13090}
     - Class: 114
-      Script: {instanceID: 13118}
+      Script: {instanceID: 13120}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -258,8 +268,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -269,17 +277,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11434}
-    - Class: 114
       Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11772}
+      Script: {instanceID: 11476}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11862}
     - Class: 114
       Script: {instanceID: 12058}
     - Class: 114
@@ -287,19 +293,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12476}
-    - Class: 114
-      Script: {instanceID: 12490}
-    - Class: 114
       Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 13078}
     - Class: 114
-      Script: {instanceID: 13076}
+      Script: {instanceID: 13090}
     - Class: 114
-      Script: {instanceID: 13088}
-    - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 13104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -340,13 +340,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11434}
-    - Class: 114
       Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11860}
+      Script: {instanceID: 11476}
+    - Class: 114
+      Script: {instanceID: 11862}
     - Class: 114
       Script: {instanceID: 12038}
     - Class: 114
@@ -356,7 +356,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13088}
+      Script: {instanceID: 13090}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -416,6 +416,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IntroSequence
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -574,12 +580,6 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 5a071a616d99baf52c20fb2cda283ef2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ClickPasture
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -592,7 +592,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 2c4681ec818a5f667b33e85dd698aa12
+      Hash: cfc71dcd4203e923eaba508fbfe7940c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -706,7 +706,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 662e30b8b16441de72cd6424e9a361aa
+      Hash: 1f7f08764b3435c814829cc1f40f5fdf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CowScript
@@ -746,6 +746,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CowMenuPopUp
   - hash:
       serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
@@ -844,9 +850,9 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 9
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  - Assets/Scenes/MilkCow.unity
   - Assets/Scenes/MainScene.unity
+  - Assets/Scenes/MilkCow.unity
+  - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/Bank Summary.unity
   - Assets/Scenes/store.unity
   playerPath: /Users/lauryn/UnityProjects/CashCows/CashCows
