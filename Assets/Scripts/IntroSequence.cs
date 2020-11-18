@@ -9,9 +9,13 @@ public class IntroSequence : MonoBehaviour
     private Transform WelcomeTextIntroduction;
     private Transform MoolaTextIntroduction1;
     private Transform MoolaTextIntroduction2;
+    private Transform MoolaArrow;
     private Transform StoreTextIntroduction1;
+    private Transform StoreArrow;
     private Transform CodexTextIntroduction1;
+    private Transform CodexArrow;
     private Transform PastureTextIntroduction1;
+    private Transform PastureArrow;
     private Transform ExploreTextIntroduction;
     private static int time = 0;
     public static int flag = 0;
@@ -28,7 +32,15 @@ public class IntroSequence : MonoBehaviour
         CodexTextIntroduction1 = Introduction.Find("CodexText1");
         PastureTextIntroduction1 = Introduction.Find("PastureText1");
         ExploreTextIntroduction = Introduction.Find("ExploreText");
+        MoolaArrow = Introduction.Find("MoolaArrow");
+        StoreArrow = Introduction.Find("StoreArrow");
+        CodexArrow = Introduction.Find("CodexArrow");
+        PastureArrow = Introduction.Find("PastureArrow");
 
+        PastureArrow.gameObject.SetActive(false);
+        CodexArrow.gameObject.SetActive(false);
+        StoreArrow.gameObject.SetActive(false);
+        MoolaArrow.gameObject.SetActive(false);
         ExploreTextIntroduction.gameObject.SetActive(false);
         PastureTextIntroduction1.gameObject.SetActive(false);
         CodexTextIntroduction1.gameObject.SetActive(false);
@@ -41,6 +53,10 @@ public class IntroSequence : MonoBehaviour
         RectTransform WelcomeRectTransform = WelcomeScreen.GetComponent<RectTransform>();
         WelcomeRectTransform.anchoredPosition = new Vector2(0f,0f);
     }
+
+    //Notes//
+    // TO show stuff on other screens (bank, store, codex), can take a screenshot of that and turn it
+    // into an image. Use image to point stuff out to user for introduction sequence.
 
     // Update is called once per frame
     void Update()
@@ -58,6 +74,7 @@ public class IntroSequence : MonoBehaviour
             if(time == 100){
                 WelcomeTextIntroduction.gameObject.SetActive(false);
                 MoolaTextIntroduction1.gameObject.SetActive(true);
+                MoolaArrow.gameObject.SetActive(true);
             }
             if(time == 200){
                 MoolaTextIntroduction1.gameObject.SetActive(false);
@@ -65,18 +82,25 @@ public class IntroSequence : MonoBehaviour
             }
             if(time == 300){
                 MoolaTextIntroduction2.gameObject.SetActive(false);
+                MoolaArrow.gameObject.SetActive(false);
                 StoreTextIntroduction1.gameObject.SetActive(true);
+                StoreArrow.gameObject.SetActive(true);
             }
             if(time == 400){
                 StoreTextIntroduction1.gameObject.SetActive(false);
+                StoreArrow.gameObject.SetActive(false);
                 CodexTextIntroduction1.gameObject.SetActive(true);
+                CodexArrow.gameObject.SetActive(true);
             }
             if(time == 500){
                 CodexTextIntroduction1.gameObject.SetActive(false);
+                CodexArrow.gameObject.SetActive(false);
                 PastureTextIntroduction1.gameObject.SetActive(true);
+                PastureArrow.gameObject.SetActive(true);
             }
             if(time == 600){
                 PastureTextIntroduction1.gameObject.SetActive(false);
+                PastureArrow.gameObject.SetActive(false);
                 ExploreTextIntroduction.gameObject.SetActive(true);
             }
             if(time == 700){
