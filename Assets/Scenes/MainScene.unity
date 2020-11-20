@@ -6227,6 +6227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMoola: {fileID: 1724599709}
   CowPreFab: {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
+  ach: {fileID: 1615079020}
 --- !u!4 &1999970129
 Transform:
   m_ObjectHideFlags: 0

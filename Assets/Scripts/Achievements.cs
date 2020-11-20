@@ -21,7 +21,7 @@ public class Achievements : MonoBehaviour
     void Update()
     {
         ach01Code = PlayerPrefs.GetInt("Ach01");
-        if(ach01Code == ach01Trigger & ach01Code != 1){
+        if(act01Count == ach01Trigger && ach01Code != 1){
             StartCoroutine(TriggerAch01());
         }
     }
@@ -41,5 +41,11 @@ public class Achievements : MonoBehaviour
         achTitle.GetComponent<Text>().text = "";
         achDesc.GetComponent<Text>().text = "";
         achActive = false;
+    }
+
+    public void increaseCount(string ach){
+        if(ach == "A01"){
+            act01Count += 1;
+        }
     }
 }

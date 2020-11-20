@@ -41,6 +41,7 @@ public class PlayerScript : MonoBehaviour
     //Vars
     public Text PlayerMoola;
     public GameObject CowPreFab;
+    public Achievements ach;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +63,12 @@ public class PlayerScript : MonoBehaviour
 
     public void AddMoola(int moola){
         checkingsMoola += moola;
+        // if(checkingsMoola == 300){
+        //     ach.increaseCount("A01");
+        // } 
+        // if(checkingsMoola == 500){
+        //     ach.increaseCount("A01");
+        // }
     }
 
     public void SubtractMoola(int moola){
