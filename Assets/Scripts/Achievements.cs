@@ -15,7 +15,15 @@ public class Achievements : MonoBehaviour
     public GameObject ach01Image;
     public static int act01Count = 0;
     public int ach01Trigger = 1;
-    public int ach01Code;
+    public int ach01Code = 0;
+
+    void Start(){
+        achNote.SetActive(false);
+        ach01Image.SetActive(false);
+        achTitle.SetActive(false);
+        achDesc.SetActive(false);
+        achActive = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,6 +39,8 @@ public class Achievements : MonoBehaviour
         ach01Code = 1;
         PlayerPrefs.SetInt("Ach01", ach01Code);
         ach01Image.SetActive(true);
+        achTitle.SetActive(true);
+        achDesc.SetActive(true);
         achTitle.GetComponent<Text>().text = "FIRST ACHIEVEMENT";
         achDesc.GetComponent<Text>().text = "HERE'S THE TEXT";
         achNote.SetActive(true);
