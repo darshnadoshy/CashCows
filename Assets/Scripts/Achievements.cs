@@ -44,7 +44,7 @@ public class Achievements : MonoBehaviour
     }
 
     public void increaseCount(string ach){
-        if(ach == "A01"){
+        if(ach.Equals("A01")){
             act01Count += 1;
         }
     }

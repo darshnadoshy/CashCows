@@ -73,39 +73,39 @@ public class IntroSequence : MonoBehaviour
                 Introduction.gameObject.SetActive(true);
                 WelcomeTextIntroduction.gameObject.SetActive(true);
             }
-            if(time == 10){
+            if(time == 100){
                 WelcomeTextIntroduction.gameObject.SetActive(false);
                 MoolaTextIntroduction1.gameObject.SetActive(true);
                 MoolaArrow.gameObject.SetActive(true);
             }
-            if(time == 20){
+            if(time == 200){
                 MoolaTextIntroduction1.gameObject.SetActive(false);
                 MoolaTextIntroduction2.gameObject.SetActive(true);
             }
-            if(time == 30){
+            if(time == 300){
                 MoolaTextIntroduction2.gameObject.SetActive(false);
                 MoolaArrow.gameObject.SetActive(false);
                 StoreTextIntroduction1.gameObject.SetActive(true);
                 StoreArrow.gameObject.SetActive(true);
             }
-            if(time == 40){
+            if(time == 400){
                 StoreTextIntroduction1.gameObject.SetActive(false);
                 StoreArrow.gameObject.SetActive(false);
                 CodexTextIntroduction1.gameObject.SetActive(true);
                 CodexArrow.gameObject.SetActive(true);
             }
-            if(time == 50){
+            if(time == 500){
                 CodexTextIntroduction1.gameObject.SetActive(false);
                 CodexArrow.gameObject.SetActive(false);
                 PastureTextIntroduction1.gameObject.SetActive(true);
                 PastureArrow.gameObject.SetActive(true);
             }
-            if(time == 60){
+            if(time == 600){
                 PastureTextIntroduction1.gameObject.SetActive(false);
                 PastureArrow.gameObject.SetActive(false);
                 ExploreTextIntroduction.gameObject.SetActive(true);
             }
-            if(time == 70){
+            if(time == 700){
                 ExploreTextIntroduction.gameObject.SetActive(false);
                 Introduction.gameObject.SetActive(false);
                 PlayerPrefs.SetInt("IntroFlag", 1);
