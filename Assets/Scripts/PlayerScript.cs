@@ -37,6 +37,7 @@ public class PlayerScript : MonoBehaviour
     static public int checkingsMoola = 200;
     static public int savingsMoola = 0;
     static public List<Cow> CowReferences; // TODO switch to Cow object
+    static private int countCows = 1; // TODO DELETE LATER - when names can be used
 
     //Vars
     public Text PlayerMoola;
@@ -50,9 +51,11 @@ public class PlayerScript : MonoBehaviour
         CowReferences = new List<Cow>();
         GameObject cowObj = (GameObject)Instantiate(CowPreFab, new Vector3(18.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new Cow("Betsy", cowObj));
+        PlayerPrefs.SetString("Betsy", "false");
         // DELETE LATER - for testing /////////////////////
         GameObject cowObj2 = (GameObject)Instantiate(CowPreFab, new Vector3(19.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new Cow("Donna", cowObj2));
+        PlayerPrefs.SetString("Donna", "false");
     }
 
     // Update is called once per frame
@@ -79,10 +82,15 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    public void AddCow(GameObject cow){ // TODO - TEST
+    // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
+    public void AddCow(GameObject cow){
         Vector3 RandomSpawn = new Vector3(Random.Range(18f, 20f), 1.24f, Random.Range(7.5f, 9.5f));
         GameObject cowRef = (GameObject)Instantiate(CowPreFab, RandomSpawn, Quaternion.identity);
         CowReferences.Add(new Cow(cowRef));
+        // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
+        countCows += 1;
+        string name = "Betsy" + countCows.ToString();
+        PlayerPrefs.SetString(name, "false");
     }
 
     public void SubtractCow(GameObject cow){
