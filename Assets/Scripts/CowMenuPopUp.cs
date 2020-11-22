@@ -33,7 +33,7 @@ public class CowMenuPopUp : MonoBehaviour
         cowBackground.gameObject.SetActive(true);
 
         for(int i = 0; i < player.GetComponent<PlayerScript>().GetListCows().Count; i++){
-            CreateMenuItem(player.GetComponent<PlayerScript>().GetListCows()[i].Name, i+1);
+            CreateMenuItem(player.GetComponent<PlayerScript>().GetListCows()[i].Name, i);
         }
     }
 

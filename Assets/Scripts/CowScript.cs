@@ -17,7 +17,6 @@ public class CowScript : MonoBehaviour
     {
         currentMilk = 0;
         milkBar.SetMaxMilk(maxMilk);
-       // popUp = GameObject.Find("PopUp");
         popUp.SetActive(false);
     }
 
@@ -35,8 +34,6 @@ public class CowScript : MonoBehaviour
             } 
         }
     }
-
-
 
     void AddMilk(){
         currentMilk += 1;

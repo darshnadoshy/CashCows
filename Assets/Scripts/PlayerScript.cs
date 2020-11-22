@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour
     // STATIC Vars
     static public int checkingsMoola = 100;
     static public int savingsMoola = 0;
-    static public List<Cow> CowReferences; // TODO switch to Cow object
+    static public List<Cow> CowReferences;
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
 
     //Vars
@@ -65,9 +65,6 @@ public class PlayerScript : MonoBehaviour
 
     public void AddMoola(int moola){
         checkingsMoola += moola;
-        // if(checkingsMoola == 300){
-        //      ach.increaseCount("A01");
-        // }
     }
 
     public void SubtractMoola(int moola){
@@ -80,6 +77,11 @@ public class PlayerScript : MonoBehaviour
 
     public int GetCheckingsMoola(){
         return checkingsMoola;
+    }
+
+    //TODO test
+    public int GetSavingsMoola(){
+        return savingsMoola;
     }
 
     // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
