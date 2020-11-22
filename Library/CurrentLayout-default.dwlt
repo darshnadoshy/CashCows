@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 651
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 677, y: 342}
+  m_MaxSize: {x: 12002, y: 8042}
   vertical: 0
-  controlID: 40
+  controlID: 105
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 358
     width: 930
     height: 293
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -216,10 +216,10 @@ MonoBehaviour:
     y: 0
     width: 930
     height: 651
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 402, y: 342}
+  m_MaxSize: {x: 8002, y: 8042}
   vertical: 1
-  controlID: 41
+  controlID: 106
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 0
     width: 930
     height: 358
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 42
+  controlID: 107
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Images
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Images
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/lauryn/UnityProjects/CashCows
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 100}
-    m_SelectedIDs: f8360000
-    m_LastClickedID: 14072
-    m_ExpandedIDs: 00000000cc360000ce360000d0360000d2360000d4360000d6360000d8360000da360000dc360000ec360000
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: 04370000
+    m_LastClickedID: 14084
+    m_ExpandedIDs: 00000000d6360000d8360000da360000dc360000de360000e0360000e2360000e4360000e6360000f0360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000cc360000ce360000d0360000d2360000d4360000d6360000d8360000da360000dc360000
+    m_ExpandedIDs: 00000000d6360000d8360000da360000dc360000de360000e0360000e2360000e4360000e6360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -404,8 +404,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 94350000
+    m_LastClickedInstanceID: 13716
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -504,7 +504,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a2d3ffff5ad4ffff54d7ffffd2dbffff8ee2ffff00e4ffff0ce4ffff18e4ffff24e4ffff7ae5ffff86e5ffff92e5ffff9ee5ffffaae5ffff2ce6ffff28eeffffd2eeffff4aefffffd8f0ffffa8f1ffff5cfbffff5c460000984600000a4700000e4700007447000098480000
+      m_ExpandedIDs: 66fbffff0a34000046340000b8340000f834000012360000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -564,9 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 584.4204, y: 325.681, z: 2.666565}
+    m_Target: {x: 250.1565, y: 445.68713, z: 0}
     speed: 2
-    m_Value: {x: 584.4204, y: 325.681, z: 2.666565}
+    m_Value: {x: 250.1565, y: 445.68713, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.051286995, y: -0.003897997, z: 0.00020001996, w: -0.99867636}
   m_Size:
-    m_Target: 324.67
+    m_Target: 182.94261
     speed: 2
-    m_Value: 324.67
+    m_Value: 182.94261
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -480,8 +480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.096, y: 15.8}
-  m_SizeDelta: {x: 139.26051, y: 24.039627}
+  m_AnchoredPosition: {x: 26.3, y: 15.8}
+  m_SizeDelta: {x: 139.2605, y: 24.039627}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112317869
 MonoBehaviour:
@@ -504,12 +504,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 12
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4624,7 +4624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.207, y: -16.393}
+  m_AnchoredPosition: {x: 36.9, y: -13.8}
   m_SizeDelta: {x: 160.08798, y: 40.34587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494913755
@@ -4648,7 +4648,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5066,7 +5066,7 @@ MonoBehaviour:
   achActive: 0
   achTitle: {fileID: 112317867}
   achDesc: {fileID: 1494913753}
-  ach01Image: {fileID: 1826945964}
+  achImage: {fileID: 1826945964}
   ach01Trigger: 1
   ach01Code: 0
 --- !u!4 &1615079021

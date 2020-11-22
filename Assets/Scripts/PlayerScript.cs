@@ -34,7 +34,7 @@ public class Cow {
 public class PlayerScript : MonoBehaviour
 {
     // STATIC Vars
-    static public int checkingsMoola = 200;
+    static public int checkingsMoola = 100;
     static public int savingsMoola = 0;
     static public List<Cow> CowReferences; // TODO switch to Cow object
     static private int countCows = 1; // TODO DELETE LATER - when names can be used

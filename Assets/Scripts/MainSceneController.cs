@@ -18,5 +18,8 @@ public class MainSceneController : MonoBehaviour
         if(player.GetComponent<PlayerScript>().GetCheckingsMoola() == 300){
             ach.increaseCount("A01");
         } 
+        if(player.GetComponent<PlayerScript>().GetCheckingsMoola() == 500){
+            ach.increaseCount("A02");
+        } 
     }
 }
