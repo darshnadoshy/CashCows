@@ -23,6 +23,7 @@ public class Achievements : MonoBehaviour
         achTitle.SetActive(false);
         achDesc.SetActive(false);
         achActive = false;
+        PlayerPrefs.SetInt("Ach01", 0);
     }
 
     // Update is called once per frame
