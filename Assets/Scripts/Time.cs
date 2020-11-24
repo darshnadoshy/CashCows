@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Time : MonoBehaviour
 {
-    private int playTime = 21600;
+    private int playTime = 21600;  // TODO - TURN INTO PLAYER PREF!!! (along with moola)
     private int minutes = 0;
     private int hours = 6;
     private int days = 0;
