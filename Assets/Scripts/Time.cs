@@ -6,9 +6,8 @@ using UnityEngine.UI;
 public class Time : MonoBehaviour
 {
     private int playTime = 21600;
-    private int seconds = 0;
     private int minutes = 0;
-    private int hours = 0;
+    private int hours = 6;
     private int days = 0;
 
     //Text
@@ -17,14 +16,14 @@ public class Time : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeDisplay.text = "Time: 6:00";
         StartCoroutine(PlayTimer());
     }
 
     private IEnumerator PlayTimer(){
         while(true){
-            yield return new WaitForSeconds(1);
-            playTime += 1;
-            seconds = playTime % 60;
+            yield return new WaitForSeconds(60);
+            playTime += 1800; // 30 min in seconds
             minutes = (playTime / 60) % 60;
             hours = (playTime / 3600) % 24;
             days = (playTime / 86400) % 365;
@@ -32,10 +31,10 @@ public class Time : MonoBehaviour
     }
 
     void Update(){
-        if(minutes < 10){
-            timeDisplay.text = "Time: " + hours.ToString() + ":0" + minutes.ToString();
+        if(minutes != 30){
+            timeDisplay.text = "Time: " + hours.ToString() + ":00";
         } else {
-            timeDisplay.text = "Time: " + hours.ToString() + ":" + minutes.ToString();
+            timeDisplay.text = "Time: " + hours.ToString() + ":30";
         }
     }
 }
