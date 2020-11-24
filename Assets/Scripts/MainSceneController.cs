@@ -15,7 +15,7 @@ public class MainSceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.GetComponent<PlayerScript>().GetCheckingsMoola() == 300){
+        if(player.GetComponent<PlayerScript>().GetCheckingsMoola() == 200){
             ach.increaseCount("A01");
         } 
         if(player.GetComponent<PlayerScript>().GetCheckingsMoola() == 500){
