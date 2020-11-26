@@ -10,7 +10,6 @@ public class CowMenuPopUp : MonoBehaviour
     private Transform cowItemTemplate;
     private Transform cowText;
     private Transform cowBackground;
-    public Button button;
     public GameObject player; // for list of cows
     
     //static int flag = 0; //use to switch on and off? look up tutorial?
@@ -22,8 +21,6 @@ public class CowMenuPopUp : MonoBehaviour
         cowItemTemplate.gameObject.SetActive(false);
         cowText.gameObject.SetActive(false);
         cowBackground.gameObject.SetActive(false);
-
-        button.onClick.AddListener(buttonClicked);
     }
 
     public void onTrigger(){
@@ -33,29 +30,19 @@ public class CowMenuPopUp : MonoBehaviour
         cowBackground.gameObject.SetActive(true);
 
         for(int i = 0; i < player.GetComponent<PlayerScript>().GetListCows().Count; i++){
-            CreateMenuItem(player.GetComponent<PlayerScript>().GetListCows()[i].Name, i);
+            CreateMenuItem(player.GetComponent<PlayerScript>().GetListCows()[i], i);
         }
     }
 
-    private void CreateMenuItem(string cowName, int positionIndex){
+    private void CreateMenuItem(CowObject cow, int positionIndex){
         Transform cowItemTransform = Instantiate(cowItemTemplate, container);
         cowItemTransform.gameObject.SetActive(true);
         RectTransform cowItemRectTransform = cowItemTransform.GetComponent<RectTransform>();
 
         float itemHeight = 50f;
         cowItemRectTransform.anchoredPosition = new Vector2(0, -itemHeight * positionIndex); // TODO FIX
-        cowItemTransform.Find("CowName").GetComponent<Text>().text = cowName;
+        cowItemTransform.Find("CowName").GetComponent<Text>().text = cow.getName();
+        cow.SetButton(cowItemTransform.Find("HiddenButtonMenuPopup").GetComponent<Button>());
     }
 
-    // TODO NOT WORKING!!!! (switched from button's onclick change scene in UI)
-    void buttonClicked(){
-        string name = button.GetComponent<Text>().text; /// TODO WRONG TEXt.... COWNAME is a sibling of the button componenet not child
-        Debug.Log("Clicked!");
-        if(PlayerPrefs.GetString(name).Equals("true")){
-            //give pop up that can't milk right now or make button gray
-            Debug.Log("Milked already!");
-        } else {
-            SceneManager.LoadScene("MilkCow");
-        }
-    }
 }

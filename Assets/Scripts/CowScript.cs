@@ -9,7 +9,7 @@ public class CowScript : MonoBehaviour
     public int currentMilk;
 
     public MilkCowScript milkBar;
-    public GameObject popUp;
+    public GameObject time;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class CowScript : MonoBehaviour
     {
         currentMilk = 0;
         milkBar.SetMaxMilk(maxMilk);
-        popUp.SetActive(false);
+        PlayerPrefs.SetString("currentlyBeingMilked", "None");
     }
 
     // Update is called once per frame
@@ -28,8 +28,15 @@ public class CowScript : MonoBehaviour
             milkBar.SetMilk(currentMilk);
             if(currentMilk == maxMilk){
                 player.GetComponent<PlayerScript>().AddMoola(100);
-                popUp.SetActive(true);
-                PlayerPrefs.SetString("Betsy", "true");
+                List<CowObject> list = player.GetComponent<PlayerScript>().GetListCows();
+
+                for(int i = 0; i < list.Count; i++){
+                    if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){
+                        list[i].SetMilkedStatus(true);
+                        StartCoroutine(ResetMilk(list[i]));
+                        break;
+                    }
+                }
                 return;
             } 
         }
@@ -38,4 +45,11 @@ public class CowScript : MonoBehaviour
     void AddMilk(){
         currentMilk += 1;
     }
+
+    IEnumerator ResetMilk(CowObject cowObj){
+        yield return new WaitForSeconds(60);
+        cowObj.SetMilkedStatus(false);
+        cowObj.ChangeButtonInteractable(true);
+    }
+
 }

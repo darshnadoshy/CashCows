@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Time : MonoBehaviour
 {
-    private int playTime = 21600;  // TODO - TURN INTO PLAYER PREF!!! (along with moola)
-    private int minutes = 0;
-    private int hours = 6;
-    private int days = 0;
+    private static int playTime = 21600;  // TODO - TURN INTO PLAYER PREF!!! (along with moola)
+    private static int minutes = 0;
+    private static int hours = 6;
+    private static int days = 0;
 
     //Text
     public Text timeDisplay;
@@ -36,5 +36,9 @@ public class Time : MonoBehaviour
         } else {
             timeDisplay.text = "Time: " + hours.ToString() + ":30";
         }
+    }
+
+    public int GetTime(){
+        return playTime;
     }
 }

@@ -3,40 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Cow {
-    public Cow(GameObject cowRef){
-        CowRef = cowRef;
-    }
-    public Cow(string name, GameObject cowRef){
-        Name = name;
-        CowRef = cowRef;
-    }
-    public string Name;
-    public GameObject CowRef;
-    public bool milked = false;
-
-    public string getName(){
-        return Name;
-    }
-
-    public void setName(string name){
-        Name = name;
-    }
-
-    // async Task ChangeMeAfter()
-    // {
-    //     await Task.Delay(TimeSpan.FromSeconds(10.0f));
-    //     milked = false;
-    //     return new Task();
-    // }
-}
 
 public class PlayerScript : MonoBehaviour
 {
     // STATIC Vars
     static public int checkingsMoola = 100;
     static public int savingsMoola = 0;
-    static public List<Cow> CowReferences;
+    static public List<CowObject> CowReferences;
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
 
     //Vars
@@ -47,13 +20,13 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         PlayerMoola.text = "" + checkingsMoola;
-        CowReferences = new List<Cow>();
+        CowReferences = new List<CowObject>();
         GameObject cowObj = (GameObject)Instantiate(CowPreFab, new Vector3(18.72f, 1.24f, 8.62f), Quaternion.identity);
-        CowReferences.Add(new Cow("Betsy", cowObj));
+        CowReferences.Add(new CowObject("Betsy", cowObj));
         PlayerPrefs.SetString("Betsy", "false");
         // DELETE LATER - for testing /////////////////////
         GameObject cowObj2 = (GameObject)Instantiate(CowPreFab, new Vector3(19.72f, 1.24f, 8.62f), Quaternion.identity);
-        CowReferences.Add(new Cow("Donna", cowObj2));
+        CowReferences.Add(new CowObject("Donna", cowObj2));
         PlayerPrefs.SetString("Donna", "false");
     }
 
@@ -88,7 +61,7 @@ public class PlayerScript : MonoBehaviour
     public void AddCow(GameObject cow){
         Vector3 RandomSpawn = new Vector3(Random.Range(18f, 20f), 1.24f, Random.Range(7.5f, 9.5f));
         GameObject cowRef = (GameObject)Instantiate(CowPreFab, RandomSpawn, Quaternion.identity);
-        CowReferences.Add(new Cow(cowRef));
+        CowReferences.Add(new CowObject(cowRef));
         // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
         countCows += 1;
         string name = "Betsy" + countCows.ToString();
@@ -99,7 +72,7 @@ public class PlayerScript : MonoBehaviour
         //TODO
     }
 
-    public List<Cow> GetListCows(){
+    public List<CowObject> GetListCows(){
         return CowReferences;
     }
 }
