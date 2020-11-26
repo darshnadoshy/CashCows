@@ -2113,6 +2113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMilk: 5
   currentMilk: 0
+  popUp: {fileID: 213673072}
   milkBar: {fileID: 1108021806}
   time: {fileID: 839616553}
   player: {fileID: 1123930542}
