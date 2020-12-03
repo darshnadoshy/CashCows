@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
 {
     // STATIC Vars
     static public int checkingsMoola = 100;
-    static public int savingsMoola = 0;
+    static public int savingsMoola = 200;
     static public List<Cow> CowReferences;
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
 
@@ -101,5 +101,31 @@ public class PlayerScript : MonoBehaviour
 
     public List<Cow> GetListCows(){
         return CowReferences;
+    }
+
+    //Darshna's functions for Transfer Money
+
+    public Text message;
+
+    public void SubtractSavings(int amount)
+    {
+        //Testing - Remove message after testing
+        message.text = savingsMoola.ToString() + amount.ToString();
+        savingsMoola -= amount;
+    }
+
+    public void SubtractCheckings(int amount)
+    {
+        checkingsMoola -= amount;
+    }
+
+    public void AddSavings(int amount)
+    {
+        savingsMoola += amount;
+    }
+
+    public void AddCheckings(int amount)
+    {
+        checkingsMoola += amount;
     }
 }
