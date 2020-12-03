@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/store.unity
     guid: bf4377d0ae6ab4cc8ae88a844e94f876
+  - enabled: 1
+    path: Assets/Scenes/Summary.unity
+    guid: 9cd7cc88c1eb046719300d4a17300fc8
+  - enabled: 1
+    path: Assets/Scenes/Statements.unity
+    guid: fc71afbcc87054d7fb6de57e37ef971a
+  - enabled: 1
+    path: Assets/Scenes/TransferMoney.unity
+    guid: dfc0e4c2557af475c840da329ea84312
   m_configObjects: {}
