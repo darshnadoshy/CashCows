@@ -15,7 +15,6 @@ public class CowObject
     private string Name;
     private GameObject CowRef;
     private bool milked = false;
-    private Button button;
 
     // GET SET NAME
     public string getName(){
@@ -33,14 +32,5 @@ public class CowObject
 
     public void SetMilkedStatus(bool status){
         milked = status;
-    }
-
-    // GET SET BUTTON TO MILK
-    public void SetButton(Button newButton){
-        button = newButton;
-    }
-
-    public void ChangeButtonInteractable(bool status){
-        button.interactable = status;
     }
 }

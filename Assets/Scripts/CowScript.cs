@@ -17,7 +17,6 @@ public class CowScript : MonoBehaviour
     {
         currentMilk = 0;
         milkBar.SetMaxMilk(maxMilk);
-        PlayerPrefs.SetString("currentlyBeingMilked", "None");
         popUp.SetActive(false);
     }
 
@@ -33,9 +32,11 @@ public class CowScript : MonoBehaviour
                 List<CowObject> list = player.GetComponent<PlayerScript>().GetListCows();
 
                 // Find currently milked cow and set milked status to true, also start reset coroutine
+                Debug.Log("MILKED: " + PlayerPrefs.GetString("currentlyBeingMilked"));
                 for(int i = 0; i < list.Count; i++){
-                    if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){
+                    if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){ //this might be wrong
                         list[i].SetMilkedStatus(true);
+                        PlayerPrefs.SetString("currentlyBeingMilked", "None");
                         StartCoroutine(ResetMilk(list[i]));
                         break;
                     }
@@ -53,7 +54,6 @@ public class CowScript : MonoBehaviour
     IEnumerator ResetMilk(CowObject cowObj){
         yield return new WaitForSeconds(60);
         cowObj.SetMilkedStatus(false);
-        cowObj.ChangeButtonInteractable(true);
     }
 
 }

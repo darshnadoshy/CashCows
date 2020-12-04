@@ -40,9 +40,14 @@ public class CowMenuPopUp : MonoBehaviour
         RectTransform cowItemRectTransform = cowItemTransform.GetComponent<RectTransform>();
 
         float itemHeight = 50f;
-        cowItemRectTransform.anchoredPosition = new Vector2(0, -itemHeight * positionIndex); // TODO FIX
+        cowItemRectTransform.anchoredPosition = new Vector2(0, -itemHeight * positionIndex);
         cowItemTransform.Find("CowName").GetComponent<Text>().text = cow.getName();
-        cow.SetButton(cowItemTransform.Find("HiddenButtonMenuPopup").GetComponent<Button>());
+        Debug.Log(cow.getName() + " interactable: " + cow.GetMilkedStatus());
+        if(cow.GetMilkedStatus() == true){ 
+            cowItemTransform.Find("HiddenButtonMenuPopup").GetComponent<Button>().interactable = false; // is this right reference for button?
+        } else {
+            cowItemTransform.Find("HiddenButtonMenuPopup").GetComponent<Button>().interactable = true;
+        }
     }
 
 }

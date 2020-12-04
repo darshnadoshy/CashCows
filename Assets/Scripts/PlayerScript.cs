@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     // STATIC Vars
     static public int checkingsMoola = 100;
     static public int savingsMoola = 0;
-    static public List<CowObject> CowReferences;
+    static public List<CowObject> CowReferences; // THIS NEEDS TO BE A PLAYER PREF
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
 
     //Vars
@@ -17,17 +17,15 @@ public class PlayerScript : MonoBehaviour
     public GameObject CowPreFab;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //TODO THIS IS CREATING NEW COWS EVERY TIME PLAYER SCRIPT IS RUN
     {
         PlayerMoola.text = "" + checkingsMoola;
         CowReferences = new List<CowObject>();
         GameObject cowObj = (GameObject)Instantiate(CowPreFab, new Vector3(18.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new CowObject("Betsy", cowObj));
-        PlayerPrefs.SetString("Betsy", "false");
         // DELETE LATER - for testing /////////////////////
         GameObject cowObj2 = (GameObject)Instantiate(CowPreFab, new Vector3(19.72f, 1.24f, 8.62f), Quaternion.identity);
         CowReferences.Add(new CowObject("Donna", cowObj2));
-        PlayerPrefs.SetString("Donna", "false");
     }
 
     // Update is called once per frame

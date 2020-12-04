@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 651
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 15
+  controlID: 64
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 248
     height: 380
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -150,7 +150,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 701
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 16
+  controlID: 65
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 17
+  controlID: 66
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,20 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/lauryn/UnityProjects/CashCows
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 44350000
-    m_LastClickedID: 13636
-    m_ExpandedIDs: 000000002435000026350000283500002a3500002c3500002e35000030350000323500003435000042350000
+    scrollPos: {x: 0, y: 122}
+    m_SelectedIDs: 16370000
+    m_LastClickedID: 14102
+    m_ExpandedIDs: 00000000fc360000fe36000000370000023700000437000006370000083700000a3700000c37000014370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -379,7 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002435000026350000283500002a3500002c3500002e350000303500003235000034350000
+    m_ExpandedIDs: 00000000fc360000fe36000000370000023700000437000006370000083700000a3700000c370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 822c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: aaeeffffa2f4ffff94f6ffffeaf9ffff5cfbffffa8350000e63500005e360000ea3600009c3f0000
+      m_ExpandedIDs: 5cfbffff143400002e34000052340000ca34000056350000c2350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
