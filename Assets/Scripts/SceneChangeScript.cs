@@ -8,7 +8,6 @@ public class SceneChangeScript : MonoBehaviour
     public void SceneChange(string scene){
         SceneManager.LoadScene(scene);
     }
-
     public void ChangeSummary()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
@@ -37,12 +36,4 @@ public class SceneChangeScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
-
-    // public void SceneChangePopUpToCow(string scene){
-    //     SceneManager.LoadScene(scene);
-    // }
-
-    // public void PopUp(GameObject obj){
-    //     obj.enabled = true;
-    // }
 }

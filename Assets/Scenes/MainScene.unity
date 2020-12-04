@@ -611,6 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 208172981}
+  - component: {fileID: 208172982}
   m_Layer: 5
   m_Name: container
   m_TagString: Untagged
@@ -638,6 +639,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &208172982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208172980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc74d01588f74b9d9877a48b0d4d9e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &272579918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e004c3c6d0ca04944ad39f9de61d9606,
@@ -3221,6 +3234,17 @@ MonoBehaviour:
           m_StringArgument: MilkCow
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 208172982}
+        m_MethodName: setCurrentlyMilked
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 179431905}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1034297784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4327,7 +4351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a06661e1f7e74433806ffc4e36d2517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1034297783}
   player: {fileID: 1999970127}
 --- !u!1 &1321347014
 GameObject:

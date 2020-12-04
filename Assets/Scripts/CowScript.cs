@@ -7,9 +7,9 @@ public class CowScript : MonoBehaviour
 {
     public int maxMilk = 5;
     public int currentMilk;
-
-    public MilkCowScript milkBar;
     public GameObject popUp;
+    public MilkCowScript milkBar;
+    public GameObject time;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -29,7 +29,18 @@ public class CowScript : MonoBehaviour
             if(currentMilk == maxMilk){
                 player.GetComponent<PlayerScript>().AddMoola(100);
                 popUp.SetActive(true);
-                PlayerPrefs.SetString("Betsy", "true");
+                List<CowObject> list = player.GetComponent<PlayerScript>().GetListCows();
+
+                // Find currently milked cow and set milked status to true, also start reset coroutine
+                Debug.Log("MILKED: " + PlayerPrefs.GetString("currentlyBeingMilked"));
+                for(int i = 0; i < list.Count; i++){
+                    if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){ //this might be wrong
+                        list[i].SetMilkedStatus(true);
+                        PlayerPrefs.SetString("currentlyBeingMilked", "None");
+                        StartCoroutine(ResetMilk(list[i]));
+                        break;
+                    }
+                }
                 return;
             } 
         }
@@ -38,4 +49,11 @@ public class CowScript : MonoBehaviour
     void AddMilk(){
         currentMilk += 1;
     }
+
+    // Resets cow's milked status and lets button be interactable again
+    IEnumerator ResetMilk(CowObject cowObj){
+        yield return new WaitForSeconds(60);
+        cowObj.SetMilkedStatus(false);
+    }
+
 }
