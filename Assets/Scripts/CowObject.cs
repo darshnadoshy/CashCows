@@ -5,15 +5,10 @@ using UnityEngine.UI;
 
 public class CowObject
 {
-    public CowObject(GameObject cowRef){
-        CowRef = cowRef;
-    }
-    public CowObject(string name, GameObject cowRef){
+    public CowObject(string name){
         Name = name;
-        CowRef = cowRef;
     }
     private string Name;
-    private GameObject CowRef;
     private bool milked = false;
 
     // GET SET NAME

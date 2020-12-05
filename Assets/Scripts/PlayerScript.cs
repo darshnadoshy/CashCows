@@ -9,26 +9,34 @@ public class PlayerScript : MonoBehaviour
     // STATIC Vars
     static public int checkingsMoola = 100;
     static public int savingsMoola = 0;
-    static public List<CowObject> CowReferences; // THIS NEEDS TO BE A PLAYER PREF
+    static public List<CowObject> CowReferences = new List<CowObject>();
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
-
+    static int TEMPFLAG = 0;
+    
     //Vars
     public Text PlayerMoola;
     public GameObject CowPreFab;
 
     // Start is called before the first frame update
-    void Start() //TODO THIS IS CREATING NEW COWS EVERY TIME PLAYER SCRIPT IS RUN
+    void Start()                            //TODO THIS IS CREATING NEW COWS EVERY TIME PLAYER SCRIPT IS RUN
     {
+        if(TEMPFLAG == 0){ // DELETE LATER
+            PlayerPrefs.SetInt("Cows", 0);
+            TEMPFLAG = 1;
+        }
         PlayerMoola.text = "" + checkingsMoola;
-        CowReferences = new List<CowObject>();
-        GameObject cowObj = (GameObject)Instantiate(CowPreFab, new Vector3(18.72f, 1.24f, 8.62f), Quaternion.identity);
-        CowReferences.Add(new CowObject("Betsy", cowObj));
-        // DELETE LATER - for testing /////////////////////
-        GameObject cowObj2 = (GameObject)Instantiate(CowPreFab, new Vector3(19.72f, 1.24f, 8.62f), Quaternion.identity);
-        CowReferences.Add(new CowObject("Donna", cowObj2));
+        int flag = PlayerPrefs.GetInt("Cows");
+        if(flag == 0){
+            CowReferences.Add(new CowObject("Betsy"));
+            // DELETE LATER - for testing /////////////////////
+            CowReferences.Add(new CowObject("Donna"));
+            PlayerPrefs.SetInt("Cows", 1);
+        }
+        for(int i = 0; i < CowReferences.Count; i++){
+            Instantiate(CowPreFab, new Vector3(Random.Range(18f, 20f), 1.24f, Random.Range(7.5f, 9.5f)), Quaternion.identity);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         PlayerMoola.text = "" + checkingsMoola;
@@ -57,17 +65,16 @@ public class PlayerScript : MonoBehaviour
 
     // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
     public void AddCow(GameObject cow){
-        Vector3 RandomSpawn = new Vector3(Random.Range(18f, 20f), 1.24f, Random.Range(7.5f, 9.5f));
+        Vector3 RandomSpawn = new Vector3(Random.Range(18.5f, 19.5f), 1.24f, Random.Range(8f, 9f));
         GameObject cowRef = (GameObject)Instantiate(CowPreFab, RandomSpawn, Quaternion.identity);
-        CowReferences.Add(new CowObject(cowRef));
         // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
         countCows += 1;
         string name = "Betsy" + countCows.ToString();
-        PlayerPrefs.SetString(name, "false");
+        CowReferences.Add(new CowObject(name));
     }
 
-    public void SubtractCow(GameObject cow){
-        //TODO
+    public void SubtractCow(string name){
+        //CowReferences.DELETE(name);
     }
 
     public List<CowObject> GetListCows(){

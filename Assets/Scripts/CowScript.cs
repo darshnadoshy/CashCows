@@ -51,9 +51,11 @@ public class CowScript : MonoBehaviour
     }
 
     // Resets cow's milked status and lets button be interactable again
+    // TODO NEEDS TO GET SWITCHED TO ANOTHER SCRIPT ///////////
     IEnumerator ResetMilk(CowObject cowObj){
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(20);
         cowObj.SetMilkedStatus(false);
+        Debug.Log("Hit 20 seconds. Milked status: " + cowObj.GetMilkedStatus());
     }
 
 }
