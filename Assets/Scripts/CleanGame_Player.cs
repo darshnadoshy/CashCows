@@ -22,7 +22,7 @@ public class CleanGame_Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed); //* Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.UpArrow)){
             targetPos = new Vector2(transform.position.x, transform.position.y + YIncrement);
         } else if(Input.GetKeyDown(KeyCode.DownArrow)){
