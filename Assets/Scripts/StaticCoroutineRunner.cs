@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//AUTHOR: LotteMakesStuff
+//URL: https://gist.github.com/LotteMakesStuff/d179d28f29bc9bb499dc5260e0146154
+
 public class StaticCoroutineRunner : MonoBehaviour
 {
     public static void RunCoroutine(IEnumerator coroutine)

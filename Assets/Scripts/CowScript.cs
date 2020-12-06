@@ -15,6 +15,7 @@ public class CowScript : MonoBehaviour
     public GameObject milkContainer;
     public GameObject buttonContainer;
     public GameObject BackButton;
+    public GameObject cow;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class CowScript : MonoBehaviour
         milkContainer.SetActive(false);
         buttonContainer.SetActive(true);
         BackButton.SetActive(false);
+        cow.SetActive(true);
         milkingFlag = 0;
     }
 
@@ -69,24 +71,25 @@ public class CowScript : MonoBehaviour
 
     public void Clicked(){
         buttonContainer.SetActive(false);
+        BackButton.SetActive(true);
     }
 
     public void ClickMilkButton(){
         milkingFlag = 1;
         milkContainer.SetActive(true);
-        BackButton.SetActive(true);
     }
 
     public void ClickCleanButton(){
-        
+        cow.SetActive(false);
     }
 
     public void ClickFeedButton(){
-
+        //have to check inventory first
     }
 
     public void ClickBackButton(){
         buttonContainer.SetActive(true);
+        cow.SetActive(true);
         milkContainer.SetActive(false);
         milkingFlag = 0;
         BackButton.SetActive(false);
