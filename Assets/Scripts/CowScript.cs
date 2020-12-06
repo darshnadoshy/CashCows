@@ -11,6 +11,7 @@ public class CowScript : MonoBehaviour
     public MilkCowScript milkBar;
     public GameObject time;
     public GameObject player;
+    //public StaticCoroutineRunner COR;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +35,10 @@ public class CowScript : MonoBehaviour
                 // Find currently milked cow and set milked status to true, also start reset coroutine
                 Debug.Log("MILKED: " + PlayerPrefs.GetString("currentlyBeingMilked"));
                 for(int i = 0; i < list.Count; i++){
-                    if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){ //this might be wrong
+                    if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){
                         list[i].SetMilkedStatus(true);
                         PlayerPrefs.SetString("currentlyBeingMilked", "None");
-                        StartCoroutine(ResetMilk(list[i]));
+                        StaticCoroutineRunner.RunCoroutine(ResetMilk(list[i]));
                         break;
                     }
                 }
