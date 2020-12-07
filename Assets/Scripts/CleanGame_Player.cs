@@ -28,6 +28,13 @@ public class CleanGame_Player : MonoBehaviour
         if(points == maxPoints){
             Debug.Log("YOU WON. TODO");
             SceneManager.LoadScene("MainScene");
+            //make a screen pop up
+            //go back to cow menu
+            //we're not going to worry about timing for this. no one will care or notice
+        } else if(health == 0){
+            Debug.Log("YOU LOSE");
+            //Make a screen pop up
+            //go back to cow menu
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);

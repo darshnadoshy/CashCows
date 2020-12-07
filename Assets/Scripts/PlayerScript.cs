@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     static public int savingsMoola = 0;
     static public List<CowObject> CowReferences = new List<CowObject>();
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
-    static int TEMPFLAG = 0;
+    //static int TEMPFLAG = 0;
     
     //Vars
     public Text PlayerMoola;
@@ -20,10 +20,10 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()                            //TODO THIS IS CREATING NEW COWS EVERY TIME PLAYER SCRIPT IS RUN
     {
-        if(TEMPFLAG == 0){ // DELETE LATER
-            PlayerPrefs.SetInt("Cows", 0);
-            TEMPFLAG = 1;
-        }
+        // if(TEMPFLAG == 0){ // DELETE LATER
+        //     PlayerPrefs.SetInt("Cows", 0);
+        //     TEMPFLAG = 1;
+        // }
         PlayerMoola.text = "" + checkingsMoola;
         int flag = PlayerPrefs.GetInt("Cows");
         if(flag == 0){
