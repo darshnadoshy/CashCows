@@ -18,7 +18,7 @@ public class CleanGame_Spawner : MonoBehaviour
             int rand = Random.Range(0, obstaclePatterns.Length);
             Instantiate(obstaclePatterns[rand], transform.position, Quaternion.identity);
             timeBtwnSpawn = startTimeBtwnSpawn;
-            if(decreaseTime >= minTime){
+            if(startTimeBtwnSpawn >= minTime){
                 startTimeBtwnSpawn -= decreaseTime;
             }
         } else {

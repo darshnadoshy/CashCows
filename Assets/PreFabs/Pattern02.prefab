@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2617725860895462527}
-  - component: {fileID: 564739153485870400}
+  - component: {fileID: 6150141339356744783}
   m_Layer: 0
   m_Name: SpawnPoint02
   m_TagString: Untagged
@@ -63,7 +63,7 @@ Transform:
   m_Father: {fileID: 7594418439460636897}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &564739153485870400
+--- !u!114 &6150141339356744783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

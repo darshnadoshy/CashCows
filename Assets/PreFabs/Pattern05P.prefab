@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7948016888204884124}
-  - component: {fileID: 9129069622659397047}
+  - component: {fileID: 729133267666138071}
   m_Layer: 0
   m_Name: SpawnPoint01
   m_TagString: Untagged
@@ -63,7 +63,7 @@ Transform:
   m_Father: {fileID: 3566781602340865924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9129069622659397047
+--- !u!114 &729133267666138071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8957391791583157018}
-  - component: {fileID: 6903262768893327909}
+  - component: {fileID: 69022095647580906}
   m_Layer: 0
   m_Name: SpawnPoint02
   m_TagString: Untagged
@@ -108,7 +108,7 @@ Transform:
   m_Father: {fileID: 3566781602340865924}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6903262768893327909
+--- !u!114 &69022095647580906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,8 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4293289263221399017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02aac0fd4d89c4fa2bcf5db0c9e27467, type: 3}
+  m_Script: {fileID: 11500000, guid: a6668a34d7dad4787b262b67833d39f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 6005060338959369266, guid: 4d74f2fe3ecc743408b092e0dfbd5bcc,
-    type: 3}
+  poop: {fileID: 8798278865301971159, guid: 5f183b754cc0a417db9ad653b98f35be, type: 3}

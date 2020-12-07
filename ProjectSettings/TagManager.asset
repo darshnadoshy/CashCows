@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TopPasture
-  - SidePasture
+  - Obstacle
+  - Poop
+  - Delete
   layers:
   - Default
   - TransparentFX
