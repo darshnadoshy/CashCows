@@ -63,6 +63,15 @@ public class PlayerScript : MonoBehaviour
         return savingsMoola;
     }
 
+    public void SetCheckingsMoola(int amount){
+        checkingsMoola = amount;
+    }
+
+    //TODO test
+    public void SetSavingsMoola(int amount){
+        savingsMoola = amount;
+    }
+
     // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
     public void AddCow(GameObject cow){
         Vector3 RandomSpawn = new Vector3(Random.Range(18.5f, 19.5f), 1.24f, Random.Range(8f, 9f));

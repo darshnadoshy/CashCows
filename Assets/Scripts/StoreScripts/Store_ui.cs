@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class Store_ui : MonoBehaviour
 {
     public Text inventory;
+    public GameObject player;
 
-    public int money = 1000;
+    public int money = 0;
     public Text moneyText;
 
     public int num_cows = 0;
@@ -19,5 +20,13 @@ public class Store_ui : MonoBehaviour
         cowText.text = num_cows.ToString();
 
         inventory.text += "\n" + item;
+    }
+
+    void Start(){
+        money = player.GetComponent<PlayerScript>().GetCheckingsMoola();
+    }
+
+    void Update(){
+        player.GetComponent<PlayerScript>().SetCheckingsMoola(money);
     }
 }
