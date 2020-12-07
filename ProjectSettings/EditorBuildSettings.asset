@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bank Summary.unity
     guid: 7117d803326bb4b99a6111406dfd0181
-  - enabled: 1
-    path: Assets/Scenes/store.unity
-    guid: bf4377d0ae6ab4cc8ae88a844e94f876
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Summary.unity
     guid: 9cd7cc88c1eb046719300d4a17300fc8
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TransferMoney.unity
     guid: dfc0e4c2557af475c840da329ea84312
+  - enabled: 1
+    path: Assets/Scenes/store 1.unity
+    guid: b6ba2a1316a44438c8dc4cd551f12b3f
+  - enabled: 1
+    path: Assets/Scenes/sell.unity
+    guid: 8f1df89138db04144b4836f6cabbece1
   m_configObjects: {}
