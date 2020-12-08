@@ -14,7 +14,6 @@ public class CleanGame_Poop : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
             other.GetComponent<CleanGame_Player>().points += point;
-            Debug.Log("Points: " + other.GetComponent<CleanGame_Player>().points.ToString());
             Destroy(gameObject);
         } else if(other.CompareTag("Delete")){
             Destroy(gameObject);

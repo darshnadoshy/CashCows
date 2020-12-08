@@ -14,7 +14,6 @@ public class CleanGame_Obstacle : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
             other.GetComponent<CleanGame_Player>().health -= damage;
-            Debug.Log("damage: " + other.GetComponent<CleanGame_Player>().health.ToString());
             Destroy(gameObject);
         }
         else if(other.CompareTag("Delete")){

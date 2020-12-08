@@ -22,14 +22,17 @@ public class CleanGame_Player : MonoBehaviour
     private Vector2 targetPos = new Vector2(0, 1);
     public float YIncrement;
     public int beginPlaying = 0;
+    public GameObject player;
 
     public float speed;
     public float maxY;
     public float minY;
+    float stoppedTime;
     
     private float maxPoints = 20;
     public int health = 3;
     public int points = 0;
+    int stop_flag = 0;
 
     private float timeElapsed;
 
@@ -57,14 +60,18 @@ public class CleanGame_Player : MonoBehaviour
         timeElapsed += Time.deltaTime;
         Timer.text = "" + Mathf.RoundToInt(timeElapsed);
 
-        if(points == maxPoints){
-            float stoppedTime = timeElapsed;
+        if(points >= maxPoints){
+            if(stop_flag == 0)
+            {
+                stoppedTime = timeElapsed + 5f;
+                stop_flag = 1;
+            }
             TimerImage.gameObject.SetActive(false);
             StatsScreen.gameObject.SetActive(false);
             wonScreen.gameObject.SetActive(true); 
-            Debug.Log("");
-            Debug.Log("");
-            if(stoppedTime + 20f > timeElapsed){
+            player.GetComponent<PlayerScript>().AddMoola(20);
+
+            if(stoppedTime <= timeElapsed){
                 SceneManager.LoadScene("MainScene");
             }
         } else if(health == 0 || timeElapsed > 60){
