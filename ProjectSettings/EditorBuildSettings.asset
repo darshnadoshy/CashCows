@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TransferMoney.unity
     guid: dfc0e4c2557af475c840da329ea84312
+  - enabled: 1
+    path: Assets/Scenes/CleanGame.unity
+    guid: 91118383c6f674e06b02c991d3813737
+  - enabled: 1
+    path: Assets/Scenes/CleanGame_Welcome.unity
+    guid: 17b7093072d89441b9b67149d96786e4
   m_configObjects: {}

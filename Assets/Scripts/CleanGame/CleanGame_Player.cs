@@ -1,0 +1,84 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+//Help from the Youtube Channel: Blackthornprod
+
+public class CleanGame_Player : MonoBehaviour
+{
+    private Transform wonScreen;
+    private Transform lostScreen;
+    private Transform Canvas;
+    private Transform Container;
+    private Transform TimerImage;
+    private Transform StatsScreen;
+
+    public Text Timer;
+    public Text Health;
+    public Text Points;
+
+    private Vector2 targetPos = new Vector2(0, 1);
+    public float YIncrement;
+    public int beginPlaying = 0;
+
+    public float speed;
+    public float maxY;
+    public float minY;
+    
+    private float maxPoints = 20;
+    public int health = 3;
+    public int points = 0;
+
+    private float timeElapsed;
+
+    void Start(){
+        transform.position = new Vector2(0, 1);
+        Canvas = transform.Find("Canvas");
+        Container = Canvas.Find("BackgroundContainer");
+        wonScreen = Container.Find("WinnerBackground");
+        lostScreen = Container.Find("LoserBackground");
+        TimerImage = Canvas.Find("TimerImage");
+        StatsScreen = Canvas.Find("StatsScreen");
+
+        StatsScreen.gameObject.SetActive(true);
+        TimerImage.gameObject.SetActive(true);
+        wonScreen.gameObject.SetActive(false);
+        lostScreen.gameObject.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Health.text = "" + health.ToString();
+        Points.text = "" + points.ToString();
+
+        timeElapsed += Time.deltaTime;
+        Timer.text = "" + Mathf.RoundToInt(timeElapsed);
+
+        if(points == maxPoints){
+            float stoppedTime = timeElapsed;
+            TimerImage.gameObject.SetActive(false);
+            StatsScreen.gameObject.SetActive(false);
+            wonScreen.gameObject.SetActive(true); 
+            Debug.Log("");
+            Debug.Log("");
+            if(stoppedTime + 20f > timeElapsed){
+                SceneManager.LoadScene("MainScene");
+            }
+        } else if(health == 0 || timeElapsed > 60){
+            timeElapsed = -1000f;
+            TimerImage.gameObject.SetActive(false);
+            StatsScreen.gameObject.SetActive(false);
+            lostScreen.gameObject.SetActive(true);
+        }
+
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        if(Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y + YIncrement <= maxY){
+            targetPos = new Vector2(transform.position.x, transform.position.y + YIncrement);
+        } else if(Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y - YIncrement >= minY){
+            targetPos = new Vector2(transform.position.x, transform.position.y - YIncrement);
+        }
+    }
+}
