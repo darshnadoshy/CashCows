@@ -29,7 +29,7 @@ public class CleanGame_Player : MonoBehaviour
     public float minY;
     float stoppedTime;
     
-    private float maxPoints = 20;
+    private float maxPoints = 1;
     public int health = 3;
     public int points = 0;
     int stop_flag = 0;
