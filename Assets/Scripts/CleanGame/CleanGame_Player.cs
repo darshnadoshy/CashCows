@@ -23,6 +23,7 @@ public class CleanGame_Player : MonoBehaviour
     public float YIncrement;
     public int beginPlaying = 0;
     public GameObject player;
+    public Swipe swipeControls;
 
     public float speed;
     public float maxY;
@@ -64,12 +65,13 @@ public class CleanGame_Player : MonoBehaviour
             if(stop_flag == 0)
             {
                 stoppedTime = timeElapsed + 5f;
+                player.GetComponent<PlayerScript>().AddMoola(20);
                 stop_flag = 1;
             }
             TimerImage.gameObject.SetActive(false);
             StatsScreen.gameObject.SetActive(false);
             wonScreen.gameObject.SetActive(true); 
-            player.GetComponent<PlayerScript>().AddMoola(20);
+
 
             if(stoppedTime <= timeElapsed){
                 SceneManager.LoadScene("MainScene");
@@ -82,9 +84,9 @@ public class CleanGame_Player : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-        if(Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y + YIncrement <= maxY){
+        if((Input.GetKeyDown(KeyCode.UpArrow) || swipeControls.SwipeUp) && transform.position.y + YIncrement <= maxY){
             targetPos = new Vector2(transform.position.x, transform.position.y + YIncrement);
-        } else if(Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y - YIncrement >= minY){
+        } else if((Input.GetKeyDown(KeyCode.DownArrow) || swipeControls.SwipeDown) && transform.position.y - YIncrement >= minY){
             targetPos = new Vector2(transform.position.x, transform.position.y - YIncrement);
         }
     }
