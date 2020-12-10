@@ -6,14 +6,11 @@ using UnityEngine.UI;
 public class CowScript : MonoBehaviour
 {
     public int maxMilk = 5;
-    int maxFeed = 3;
     public int currentMilk;
-    int currentFeed;
     int milkingFlag;
     int feedingFlag;
     public GameObject popUp;
     public MilkCowScript milkScript;
-    public FeedCow feedCow;
     public GameObject time;
     public GameObject player;
     public GameObject milkContainer;
@@ -21,13 +18,14 @@ public class CowScript : MonoBehaviour
     public GameObject buttonContainer;
     public GameObject BackButton;
     public GameObject FeedPopUp;
+    public GameObject HayStack;
+    public GameObject NoHayPopUp;
     public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
     {
         currentMilk = 0;
-        currentFeed = 0;
         milkScript.SetMaxMilk(maxMilk);
         popUp.SetActive(false);
         milkContainer.SetActive(false);
@@ -35,6 +33,8 @@ public class CowScript : MonoBehaviour
         BackButton.SetActive(false);
         FeedPopUp.SetActive(false);
         feedContainer.SetActive(false);
+        HayStack.SetActive(false);
+        NoHayPopUp.SetActive(false);
         milkingFlag = 0;
         feedingFlag = 0;
     }
@@ -52,7 +52,7 @@ public class CowScript : MonoBehaviour
                     List<CowObject> list = player.GetComponent<PlayerScript>().GetListCows();
 
                     // Find currently milked cow and set milked status to true, also start reset coroutine
-                    Debug.Log("MILKED: " + PlayerPrefs.GetString("currentlyBeingMilked"));
+                    //Debug.Log("MILKED: " + PlayerPrefs.GetString("currentlyBeingMilked"));
                     for(int i = 0; i < list.Count; i++){
                         if(list[i].getName() == PlayerPrefs.GetString("currentlyBeingMilked")){
                             list[i].SetMilkedStatus(true);
@@ -66,13 +66,6 @@ public class CowScript : MonoBehaviour
             }
         } else if(feedingFlag == 1){
             feedContainer.SetActive(true);
-            if (Input.GetMouseButtonDown(0)) {
-                currentFeed++;
-                feedCow.SetFeed(currentFeed);
-                if(currentFeed == maxFeed){
-                    FeedPopUp.SetActive(true);
-                }
-            }
         }
     }
 
@@ -108,6 +101,17 @@ public class CowScript : MonoBehaviour
         popUp.SetActive(false);
         FeedPopUp.SetActive(false);
         feedContainer.SetActive(false);
+        NoHayPopUp.SetActive(false);
         //and feed & clean containers = false
+    }
+
+    public void HayButton(){
+        if (Inventory.HayCount > 0) {
+            Inventory.HayCount--;
+            HayStack.SetActive(true);
+            FeedPopUp.SetActive(true);
+        } else {
+            NoHayPopUp.SetActive(true);
+        }
     }
 }
