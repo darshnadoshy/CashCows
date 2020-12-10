@@ -2421,7 +2421,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMoola: {fileID: 2057327857}
   CowPreFab: {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
-  inventory: {fileID: 1358502671}
   message: {fileID: 1080085303}
 --- !u!4 &1133677804
 Transform:
@@ -2830,7 +2829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -359, y: -39}
+  m_AnchoredPosition: {x: -282, y: -39}
   m_SizeDelta: {x: 420.7721, y: 309.43234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358502668
@@ -3513,7 +3512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4028, y: -1339}
+  m_AnchoredPosition: {x: -4069, y: -1339}
   m_SizeDelta: {x: 451.12958, y: 384.30515}
   m_Pivot: {x: -4.9942517, y: -1.1558018}
 --- !u!114 &1691331864
@@ -3734,7 +3733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1640.8, y: -502}
+  m_AnchoredPosition: {x: -1681, y: -502}
   m_SizeDelta: {x: 333.97894, y: 296.46457}
   m_Pivot: {x: -0.5289288, y: 0.5}
 --- !u!222 &1702408062
@@ -4080,7 +4079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 152, y: -26.196}
+  m_AnchoredPosition: {x: 161, y: -26.196}
   m_SizeDelta: {x: 116.81235, y: 52.391197}
   m_Pivot: {x: 0.7011893, y: 0.5}
 --- !u!114 &1945832055

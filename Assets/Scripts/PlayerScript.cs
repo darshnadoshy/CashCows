@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
             PlayerPrefs.SetInt("Cows", 1);
         }
         for(int i = 0; i < CowReferences.Count; i++){
-            Instantiate(CowPreFab, new Vector3(Random.Range(18.5f, 19.5f), 1.24f, Random.Range(8f, 9f)), Quaternion.identity);
+            Instantiate(CowPreFab, new Vector3(Random.Range(18.5f, 20.8f), 1.24f, Random.Range(8f, 9f)), Quaternion.identity);
         }
     }
 

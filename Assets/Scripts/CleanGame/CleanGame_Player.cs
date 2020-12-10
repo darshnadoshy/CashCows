@@ -24,7 +24,7 @@ public class CleanGame_Player : MonoBehaviour
     //public GameObject player;
     public Swipe swipeControls;
 
-    public float speed = 12;
+    public float speed = 15;
     public float maxY = 5;
     public float minY = -3;
     float stoppedTime;
