@@ -12,8 +12,6 @@ public class IntroSequence : MonoBehaviour
     private Transform MoolaArrow;
     private Transform StoreTextIntroduction1;
     private Transform StoreArrow;
-    private Transform CodexTextIntroduction1;
-    private Transform CodexArrow;
     private Transform PastureTextIntroduction1;
     private Transform PastureArrow;
     private Transform ExploreTextIntroduction;
@@ -28,21 +26,17 @@ public class IntroSequence : MonoBehaviour
         MoolaTextIntroduction1 = Introduction.Find("MoolaText1");
         MoolaTextIntroduction2 = Introduction.Find("MoolaText2");
         StoreTextIntroduction1 = Introduction.Find("StoreText1");
-        CodexTextIntroduction1 = Introduction.Find("CodexText1");
         PastureTextIntroduction1 = Introduction.Find("PastureText1");
         ExploreTextIntroduction = Introduction.Find("ExploreText");
         MoolaArrow = Introduction.Find("MoolaArrow");
         StoreArrow = Introduction.Find("StoreArrow");
-        CodexArrow = Introduction.Find("CodexArrow");
         PastureArrow = Introduction.Find("PastureArrow");
 
         PastureArrow.gameObject.SetActive(false);
-        CodexArrow.gameObject.SetActive(false);
         StoreArrow.gameObject.SetActive(false);
         MoolaArrow.gameObject.SetActive(false);
         ExploreTextIntroduction.gameObject.SetActive(false);
         PastureTextIntroduction1.gameObject.SetActive(false);
-        CodexTextIntroduction1.gameObject.SetActive(false);
         StoreTextIntroduction1.gameObject.SetActive(false);
         MoolaTextIntroduction2.gameObject.SetActive(false);
         MoolaTextIntroduction1.gameObject.SetActive(false);
@@ -73,39 +67,33 @@ public class IntroSequence : MonoBehaviour
                 Introduction.gameObject.SetActive(true);
                 WelcomeTextIntroduction.gameObject.SetActive(true);
             }
-            if(time == 100){
+            if(time == 50){
                 WelcomeTextIntroduction.gameObject.SetActive(false);
                 MoolaTextIntroduction1.gameObject.SetActive(true);
                 MoolaArrow.gameObject.SetActive(true);
             }
-            if(time == 200){
+            if(time == 100){
                 MoolaTextIntroduction1.gameObject.SetActive(false);
                 MoolaTextIntroduction2.gameObject.SetActive(true);
             }
-            if(time == 300){
+            if(time == 150){
                 MoolaTextIntroduction2.gameObject.SetActive(false);
                 MoolaArrow.gameObject.SetActive(false);
                 StoreTextIntroduction1.gameObject.SetActive(true);
                 StoreArrow.gameObject.SetActive(true);
             }
-            if(time == 400){
+            if(time == 200){
                 StoreTextIntroduction1.gameObject.SetActive(false);
                 StoreArrow.gameObject.SetActive(false);
-                CodexTextIntroduction1.gameObject.SetActive(true);
-                CodexArrow.gameObject.SetActive(true);
-            }
-            if(time == 500){
-                CodexTextIntroduction1.gameObject.SetActive(false);
-                CodexArrow.gameObject.SetActive(false);
                 PastureTextIntroduction1.gameObject.SetActive(true);
                 PastureArrow.gameObject.SetActive(true);
             }
-            if(time == 600){
+            if(time == 250){
                 PastureTextIntroduction1.gameObject.SetActive(false);
                 PastureArrow.gameObject.SetActive(false);
                 ExploreTextIntroduction.gameObject.SetActive(true);
             }
-            if(time == 700){
+            if(time == 300){
                 ExploreTextIntroduction.gameObject.SetActive(false);
                 Introduction.gameObject.SetActive(false);
                 PlayerPrefs.SetInt("IntroFlag", 1);
