@@ -15,6 +15,7 @@ public class CowScript : MonoBehaviour
     public GameObject milkContainer;
     public GameObject buttonContainer;
     public GameObject BackButton;
+    public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -36,8 +37,8 @@ public class CowScript : MonoBehaviour
                 AddMilk();
                 milkScript.SetMilk(currentMilk);
                 if(currentMilk == maxMilk){
-                    player.GetComponent<PlayerScript>().AddMoola(100);
                     popUp.SetActive(true);
+                    Inventory.MilkCount++;
                     List<CowObject> list = player.GetComponent<PlayerScript>().GetListCows();
 
                     // Find currently milked cow and set milked status to true, also start reset coroutine

@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour
     static public int checkingsMoola = 100;
     static public int savingsMoola = 0;
     static public List<CowObject> CowReferences = new List<CowObject>();
+    static public List<int> Expenses = new List<int>();
+    static public List<int> Income = new List<int>();
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
     static int TEMPFLAG = 0;
     
@@ -61,6 +63,10 @@ public class PlayerScript : MonoBehaviour
     //TODO test
     public int GetSavingsMoola(){
         return savingsMoola;
+    }
+    
+    public void SetCheckingsMoola(int amount){
+        checkingsMoola = amount;
     }
 
     // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
