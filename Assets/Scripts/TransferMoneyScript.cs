@@ -8,7 +8,7 @@ public class TransferMoneyScript : MonoBehaviour
     public GameObject player;
     public Text balance1, balance2, message;
     public int value1, value2;
-    
+        
     public void HandleInputData1(int val1)
     {
         value1 = val1;
