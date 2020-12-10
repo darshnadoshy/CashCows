@@ -56,6 +56,7 @@ public class Inventory : MonoBehaviour
             SeedCount++;
         } else if(item.Equals("cow")){
             CowsCount++;
+            PlayerScript.AddCow();
         } else if(item.Equals("veg")){
             VegCount++;
         } else {

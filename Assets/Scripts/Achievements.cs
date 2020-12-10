@@ -55,8 +55,8 @@ public class Achievements : MonoBehaviour
         achImage.SetActive(true);
         achTitle.SetActive(true);
         achDesc.SetActive(true);
-        achTitle.GetComponent<Text>().text = "ACHIEVEMENT: Milk Cow";
-        achDesc.GetComponent<Text>().text = "Congrats! You have milked your first cow.";
+        achTitle.GetComponent<Text>().text = "ACHIEVEMENT: Sold Milk";
+        achDesc.GetComponent<Text>().text = "Congrats! You have sold your first milk.";
         achNote.SetActive(true);
         yield return new WaitForSeconds(7);
         //Reset script

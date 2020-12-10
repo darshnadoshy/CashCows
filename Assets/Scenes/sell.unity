@@ -2421,6 +2421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMoola: {fileID: 2057327857}
   CowPreFab: {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
+  inventory: {fileID: 1358502671}
   message: {fileID: 1080085303}
 --- !u!4 &1133677804
 Transform:

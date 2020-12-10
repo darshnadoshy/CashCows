@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerScript : MonoBehaviour
 {
     // STATIC Vars
-    static public int checkingsMoola = 100;
+    static public int checkingsMoola = 200;
     static public int savingsMoola = 0;
     static public List<CowObject> CowReferences = new List<CowObject>();
     static public List<int> Expenses = new List<int>();
@@ -70,10 +70,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
-    public void AddCow(GameObject cow){
-        Vector3 RandomSpawn = new Vector3(Random.Range(18.5f, 19.5f), 1.24f, Random.Range(8f, 9f));
-        GameObject cowRef = (GameObject)Instantiate(CowPreFab, RandomSpawn, Quaternion.identity);
-        // HAVE TO TEST THIS CODE ONCE STORE IS READY -- TODO
+    public static void AddCow(){
         countCows += 1;
         string name = "Betsy" + countCows.ToString();
         CowReferences.Add(new CowObject(name));
