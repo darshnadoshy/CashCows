@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Time : MonoBehaviour
+public class GameTime : MonoBehaviour
 {
     private static int playTime = 21600;  // TODO - TURN INTO PLAYER PREF!!! (along with moola)
     private static int minutes = 0;

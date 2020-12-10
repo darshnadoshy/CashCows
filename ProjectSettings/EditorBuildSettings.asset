@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/sell.unity
     guid: 82ef2e0fda2c04b9d81147e5c41bdd98
+  - enabled: 1
+    path: Assets/Scenes/CleanGame_Welcome.unity
+    guid: f268aff7528d24bc5bb5b4b07ba07377
+  - enabled: 1
+    path: Assets/Scenes/CleanGame.unity
+    guid: faf2395ce223b463da13075ddc6ccee2
   m_configObjects: {}
