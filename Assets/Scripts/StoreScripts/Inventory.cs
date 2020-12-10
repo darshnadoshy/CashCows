@@ -21,7 +21,7 @@ public class Inventory : MonoBehaviour
     public static int VegCount;
     public static int MilkCount;
     public static int HayCount;
-    public static int CowsCount;
+    public static int CowsCount = 2;
     public static int ApplesCount;
     public static int CornCount;
 
