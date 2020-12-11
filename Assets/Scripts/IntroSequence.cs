@@ -59,41 +59,41 @@ public class IntroSequence : MonoBehaviour
         int flag = PlayerPrefs.GetInt("IntroFlag");
 
         if(flag == 0){
-            if(time < 20){
+            if(time < 50){
                 WelcomeScreen.gameObject.SetActive(true);
             }
-            if (time == 20){
+            if (time == 50){
                 WelcomeScreen.gameObject.SetActive(false);
                 Introduction.gameObject.SetActive(true);
                 WelcomeTextIntroduction.gameObject.SetActive(true);
             }
-            if(time == 50){
+            if(time == 150){
                 WelcomeTextIntroduction.gameObject.SetActive(false);
                 MoolaTextIntroduction1.gameObject.SetActive(true);
                 MoolaArrow.gameObject.SetActive(true);
             }
-            if(time == 100){
+            if(time == 250){
                 MoolaTextIntroduction1.gameObject.SetActive(false);
                 MoolaTextIntroduction2.gameObject.SetActive(true);
             }
-            if(time == 150){
+            if(time == 350){
                 MoolaTextIntroduction2.gameObject.SetActive(false);
                 MoolaArrow.gameObject.SetActive(false);
                 StoreTextIntroduction1.gameObject.SetActive(true);
                 StoreArrow.gameObject.SetActive(true);
             }
-            if(time == 200){
+            if(time == 450){
                 StoreTextIntroduction1.gameObject.SetActive(false);
                 StoreArrow.gameObject.SetActive(false);
                 PastureTextIntroduction1.gameObject.SetActive(true);
                 PastureArrow.gameObject.SetActive(true);
             }
-            if(time == 250){
+            if(time == 550){
                 PastureTextIntroduction1.gameObject.SetActive(false);
                 PastureArrow.gameObject.SetActive(false);
                 ExploreTextIntroduction.gameObject.SetActive(true);
             }
-            if(time == 300){
+            if(time == 650){
                 ExploreTextIntroduction.gameObject.SetActive(false);
                 Introduction.gameObject.SetActive(false);
                 PlayerPrefs.SetInt("IntroFlag", 1);
