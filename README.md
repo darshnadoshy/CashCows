@@ -14,10 +14,10 @@ Use mobile rendering to test and view project. You can learn how to do that
 here: https://www.youtube.com/watch?v=80-nE7ichvk
 
 # Credits
-Lauryn Branham
-Darshna Doshy
-Sneha Polishetty
-Ting-yu Sung
+* Lauryn Branham
+* Darshna Doshy
+* Sneha Polishetty
+* Ting-yu Sung
 
 # License
 Product owned by Capital One
