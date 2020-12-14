@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8dee62a84c82408cbcfceb6bcc4951b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2004746753}
+  player: {fileID: 2004746754}
   message: {fileID: 1337225539}
 --- !u!1 &1633253435
 GameObject:
@@ -2319,7 +2319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMoola: {fileID: 1633253436}
   CowPreFab: {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
-  message: {fileID: 0}
+  message: {fileID: 1633253436}
 --- !u!4 &2004746755
 Transform:
   m_ObjectHideFlags: 0

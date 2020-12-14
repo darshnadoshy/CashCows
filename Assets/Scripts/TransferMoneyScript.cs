@@ -63,8 +63,10 @@ public class TransferMoneyScript : MonoBehaviour
                 {
                     //subtract from savings
                     player.GetComponent<PlayerScript>().SubtractSavings(amount);
+                    player.GetComponent<PlayerScript>().AddSavingTransactions("Transfer", amount, "-");
                     //add to checkings
                     player.GetComponent<PlayerScript>().AddCheckings(amount);
+                    player.GetComponent<PlayerScript>().AddCheckingTransactions("Transfer", amount, "+");
                 }
                 else 
                 {
@@ -88,8 +90,10 @@ public class TransferMoneyScript : MonoBehaviour
                 {
                     //subtract from checkings
                     player.GetComponent<PlayerScript>().SubtractCheckings(amount);
+                    player.GetComponent<PlayerScript>().AddCheckingTransactions("Transfer", amount, "-");
                     //add to savings
                     player.GetComponent<PlayerScript>().AddSavings(amount);
+                    player.GetComponent<PlayerScript>().AddSavingTransactions("Transfer", amount, "+");
                 }
                 else
                 {

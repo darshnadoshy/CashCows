@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,8 +11,8 @@ public class PlayerScript : MonoBehaviour
     static public int checkingsMoola = 200;
     static public int savingsMoola = 0;
     static public List<CowObject> CowReferences = new List<CowObject>();
-    static public List<int> Expenses = new List<int>();
-    static public List<int> Income = new List<int>();
+    static public List<(string place, int cost, string sign)> CheckingTransactions = new List<(string place, int cost, string sign)>{};
+    static public List<(string place, int cost, string sign)> SavingTransactions = new List<(string place, int cost, string sign)>{};
     static private int countCows = 1; // TODO DELETE LATER - when names can be used
     static int TEMPFLAG = 0;
     
@@ -35,7 +36,7 @@ public class PlayerScript : MonoBehaviour
             PlayerPrefs.SetInt("Cows", 1);
         }
         for(int i = 0; i < CowReferences.Count; i++){
-            Instantiate(CowPreFab, new Vector3(Random.Range(18.5f, 20.8f), 1.24f, Random.Range(8f, 9f)), Quaternion.identity);
+            Instantiate(CowPreFab, new Vector3(UnityEngine.Random.Range(18.5f, 20.8f), 1.24f, UnityEngine.Random.Range(8f, 9f)), Quaternion.identity);
         }
     }
 
@@ -82,6 +83,14 @@ public class PlayerScript : MonoBehaviour
 
     public List<CowObject> GetListCows(){
         return CowReferences;
+    }
+
+    public void AddCheckingTransactions(string type, int cost, string sign){
+        CheckingTransactions.Add((type, cost, sign));
+    }
+
+    public void AddSavingTransactions(string type, int cost, string sign){
+        SavingTransactions.Add((type, cost, sign));
     }
 
     //Darshna's functions for Transfer Money

@@ -5,22 +5,38 @@ using UnityEngine.UI;
 
 public class StatementsScript : MonoBehaviour
 {
-    public GameObject player;
+    public PlayerScript player;
     public Text message;
 
     public void HandleInputData(int value)
     {
-        if (value == 1)
+        if (value == 1) //pull from income & expenses (savings)
         {
-            message.text = "Date\t\t\tDescription\t\tAmount\n\n\n" + "Dec 10\t\tTransfer\t\t\t+50" + 
-                            "\n\n\n\t\t\t\tTotal = 50";
+            message.text = "Date\t\t\tDescription\t\tAmount\n\n";
+            for(int i = 0; i < PlayerScript.SavingTransactions.Count; i++){
+                if(PlayerScript.SavingTransactions[i].cost == 0){
+                    continue;
+                }
+                message.text = message.text + System.DateTime.Now.ToString("MMM ") + System.DateTime.Now.Month + "\t\t" + 
+                PlayerScript.SavingTransactions[i].Item1 + "\t\t\t" + 
+                PlayerScript.SavingTransactions[i].Item3 + 
+                PlayerScript.SavingTransactions[i].Item2 + "\n";
+            }
         }
 
-        if (value == 2)
+        if (value == 2) //pull from income & expenses (checkings)
         {
-            message.text = "Date\t\t\tDescription\t\tAmount\n\n\n" + "Dec 10\t\tTransfer\t\t\t-50\n\n" +
-                            "Dec 10\t\tStore\t\t\t\t+90\n\n" + "Dec 10\t\tStore\t\t\t\t-190" + 
-                            "\n\n\t\t\t\tTotal = 150";
+            message.text = "Date\t\t\tDescription\t\tAmount\n\n";
+
+            for(int i = 0; i < PlayerScript.CheckingTransactions.Count; i++){
+                if(PlayerScript.CheckingTransactions[i].cost == 0){
+                    continue;
+                }
+                message.text = message.text + System.DateTime.Now.ToString("MMM ") + System.DateTime.Now.Month + "\t\t" + 
+                PlayerScript.CheckingTransactions[i].Item1 + "\t\t\t" + 
+                PlayerScript.CheckingTransactions[i].Item3 + 
+                PlayerScript.CheckingTransactions[i].Item2 + "\n";
+            }
         }
     }
 }

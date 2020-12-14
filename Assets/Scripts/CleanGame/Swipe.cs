@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Credit to help from N3K EN youtube channel
+
 public class Swipe : MonoBehaviour
 {
     private bool tap, swipeLeft, swipeRight, swipeDown, swipeUp;
     private Vector2 startTouch, swipeDelta;
     private bool isDragging = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -287,7 +287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -420}
+  m_AnchoredPosition: {x: 305, y: -418}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123893966
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerMoola: {fileID: 1829117994}
   CowPreFab: {fileID: 1287295899898638, guid: 9ec060093457ad84ca2733cb15c2c41e, type: 3}
-  message: {fileID: 0}
+  message: {fileID: 1829117994}
 --- !u!4 &664347972
 Transform:
   m_ObjectHideFlags: 0
@@ -2390,7 +2390,6 @@ GameObject:
   - component: {fileID: 1522021455}
   - component: {fileID: 1522021454}
   - component: {fileID: 1522021457}
-  - component: {fileID: 1522021458}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2475,20 +2474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c8f40a085f444378a5cbab0f234e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1522021458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1522021453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1eb251467f254897a58796b2a49c044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BackgroundImage: {fileID: 1782551314}
-  mainCam: {fileID: 1522021455}
 --- !u!1 &1546192827
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,7 +3427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: -420}
+  m_AnchoredPosition: {x: -153, y: -419}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035759091

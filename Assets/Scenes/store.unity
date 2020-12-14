@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1120583325}
-  inventory: {fileID: 0}
+  inventory: {fileID: 1166502076}
   transactionCost: 0
   money: 100
   moneyText: {fileID: 468426026}
