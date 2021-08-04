@@ -5,6 +5,7 @@ types of students learn more about financial literacy.
 
 # Tech Used
 - Unity
+- C#
 
 # Installation
 Download Unity from https://unity3d.com/get-unity/download 
