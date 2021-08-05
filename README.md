@@ -23,3 +23,17 @@ here: https://www.youtube.com/watch?v=80-nE7ichvk
 # License
 Product owned by Capital One
 
+# Demo
+
+Watch the demo here - https://bit.ly/3s30F6r
+
+<img width="1080" alt="CashCows Welcome Screen" src="https://user-images.githubusercontent.com/52896365/128374699-78ee2962-d7e2-4f58-9989-cc8fcd28466a.png">
+
+<img width="1080" alt="Homepage" src="https://user-images.githubusercontent.com/52896365/128374752-fee4714a-e1aa-4348-95ac-0dc7a602025b.png">
+
+<img width="1080" alt="Bank" src="https://user-images.githubusercontent.com/52896365/128374781-ea991862-cf7d-458d-bd54-a91a119d1c8e.png">
+
+<img width="1080" alt="Inventory" src="https://user-images.githubusercontent.com/52896365/128374801-d8c9e704-881d-4a9d-a75d-b54628c9d3bd.png">
+
+
+
