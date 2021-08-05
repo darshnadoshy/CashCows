@@ -25,7 +25,9 @@ Product owned by Capital One
 
 # Demo
 
-Watch the demo here - https://bit.ly/3s30F6r
+Watch the CashCows App demo here - https://bit.ly/3s30F6r
+
+Watch the Budgeting Game demo here - https://bit.ly/3CjDIRf
 
 <img width="1080" alt="CashCows Welcome Screen" src="https://user-images.githubusercontent.com/52896365/128374699-78ee2962-d7e2-4f58-9989-cc8fcd28466a.png">
 
