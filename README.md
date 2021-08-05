@@ -37,5 +37,7 @@ Watch the Budgeting Game demo here - https://bit.ly/3CjDIRf
 
 <img width="1080" alt="Inventory" src="https://user-images.githubusercontent.com/52896365/128374801-d8c9e704-881d-4a9d-a75d-b54628c9d3bd.png">
 
+<img width="1080" alt="Budgeting Game" src="https://user-images.githubusercontent.com/52896365/128373787-b0d8032f-9663-4d2b-88cf-91167e47ec8e.png">
+
 
 
